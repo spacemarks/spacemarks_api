@@ -1,0 +1,1 @@
+web: deno run --allow-env --allow-net=:${PORT},github.com app.ts --port=${PORT}
