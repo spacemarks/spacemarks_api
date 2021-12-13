@@ -1,1 +1,1 @@
-web: deno run --allow-net=:${PORT},github.com --allow-env=PORT,HOSTNAME,END_REDIRECTION_URI,GITHUB_CLIENT_ID,GITHUB_CLIENT_SECRET --port=${PORT} app.ts
+web: deno run --allow-net=:${PORT},github.com --allow-env=PORT,HOSTNAME,END_REDIRECTION_URI,GITHUB_CLIENT_ID,GITHUB_CLIENT_SECRET app.ts
