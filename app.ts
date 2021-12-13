@@ -37,6 +37,6 @@ router.get('/oauth2/callback', async (ctx) => {
 const app = new Oak.Application()
 app.use(router.allowedMethods(), router.routes())
 
-await app.listen({ port: PORT, hostname: HOSTNAME })
+await app.listen({ port: PORT })
 
 console.log(`Server running at ${URL}`)
