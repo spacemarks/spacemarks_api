@@ -1,16 +1,16 @@
-<<<<<<< HEAD
+#!/usr/bin/env -S deno run --allow-net=:${PORT},github.com --allow-env=PORT,HOSTNAME,END_REDIRECTION_URI,GITHUB_CLIENT_ID,GITHUB_CLIENT_SECRET
 import { Oak, OAuth2Client } from './deps.ts'
-=======
-import { Oak, OAuth2Client } from './Deps.ts'
->>>>>>> 95079408e5b18fc797f7b3ada7bd0e3ac0138299
 
 const PORT = Number(Deno.env.get('PORT'))
 const HOSTNAME = Deno.env.get('HOSTNAME')
 const URL = `${HOSTNAME}:${PORT}`
 const END_REDIRECTION_URI = Deno.env.get('END_REDIRECTION_URI')!
+const GITHUB_CLIENT_ID = Deno.env.get('GITHUB_CLIENT_ID')!
+const GITHUB_CLIENT_SECRET = Deno.env.get('GITHUB_CLIENT_SECRET')!
+
 const oauth2Client = new OAuth2Client({
-  clientId: Deno.env.get('GITHUB_CLIENT_ID')!,
-  clientSecret: Deno.env.get('GITHUB_CLIENT_SECRET'),
+  clientId: GITHUB_CLIENT_ID,
+  clientSecret: GITHUB_CLIENT_SECRET,
   authorizationEndpointUri: 'https://github.com/login/oauth/authorize',
   tokenUri: 'https://github.com/login/oauth/access_token',
   redirectUri: `${URL}/oauth2/callback`,
