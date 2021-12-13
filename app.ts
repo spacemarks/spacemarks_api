@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Oak, OAuth2Client } from './deps.ts'
+=======
+import { Oak, OAuth2Client } from './Deps.ts'
+>>>>>>> 95079408e5b18fc797f7b3ada7bd0e3ac0138299
 
 const PORT = Number(Deno.env.get('PORT'))
 const HOSTNAME = Deno.env.get('HOSTNAME')

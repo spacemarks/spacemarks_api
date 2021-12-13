@@ -1,1 +1,1 @@
-web: deno run --allow-env --allow-net=:${PORT},github.com app.ts --port=${PORT}
+web: deno run --allow-net=:${PORT},github.com app.ts --allow-env --cached-only --port=${PORT} 
