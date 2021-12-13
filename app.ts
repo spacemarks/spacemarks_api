@@ -3,7 +3,7 @@ import { Oak, OAuth2Client } from './deps.ts'
 
 const PORT = Number(Deno.env.get('PORT'))
 const HOSTNAME = Deno.env.get('HOSTNAME')
-const URL = `${HOSTNAME}:${PORT}`
+const URL = HOSTNAME ? HOSTNAME : `0.0.0.0:${PORT}`
 const END_REDIRECTION_URI = Deno.env.get('END_REDIRECTION_URI')!
 const GITHUB_CLIENT_ID = Deno.env.get('GITHUB_CLIENT_ID')!
 const GITHUB_CLIENT_SECRET = Deno.env.get('GITHUB_CLIENT_SECRET')!
