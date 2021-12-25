@@ -27,6 +27,7 @@ router.get('/login', (ctx) => {
   ctx.response.redirect(oauth2Client.code.getAuthorizationUri())
 })
 router.get('/oauth2/callback', async (ctx) => {
+  console.log(`A user has signed in`)
   // Exchange the authorization code for an access token
   const tokens = await oauth2Client.code.getToken(ctx.request.url)
   const endRedirectionUrl = `${END_REDIRECTION_URI}?accessToken=${encodeURIComponent(tokens.accessToken)}`
